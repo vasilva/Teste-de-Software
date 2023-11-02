@@ -31,6 +31,10 @@ class Calendario(object):
         semana, nomes_dias = self._dia_do_mes_to_index(dia)
         self.eventos[semana][nomes_dias].append(evento_str)
 
+    def get_evento(self, dia):
+        semana, dia_semana = self._dia_do_mes_to_index(dia)
+        return self.eventos[semana][dia_semana]
+
     def show(self):
         f, axs = plt.subplots(len(self.cal), 7, sharex=True, sharey=True)
         for semana, ax_row in enumerate(axs):
@@ -72,7 +76,7 @@ def main():
     feb.add_evento(1, "1o dia de Fevereiro")
     feb.add_evento(2, "Evento 1")
     feb.add_evento(2, "Evento 2")
-    feb.show()
+    print(feb.get_evento(1))
 
 
 if __name__ == "__main__":
