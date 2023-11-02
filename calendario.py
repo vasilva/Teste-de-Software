@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 calendar.setfirstweekday(6)  # Domingo como 1o dia
 # Nomes dos dias da semana
-nomes_dias = "Dom Seg Ter Qua Qui Sex Sab".split()
+nomes_dias = "Domingo Segunda Terça Quarta Quinta Sexta Sábado".split()
 
 # Nomes dos 12 meses
 nomes_meses = """ 
@@ -132,7 +132,7 @@ class Mes(object):
                         fontsize=9,
                     )
         for n, dia in enumerate(nomes_dias):
-            axs[0][n].set_title(dia)
+            axs[0][n].set_title(dia[:1])
 
         f.subplots_adjust(hspace=0)
         f.subplots_adjust(wspace=0)
