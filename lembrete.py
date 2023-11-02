@@ -3,10 +3,11 @@ import matplotlib.pyplot as plt
 
 calendar.setfirstweekday(6)  # Domingo como 1o dia
 nomes_dias = "Dom Seg Ter Qua Qui Sex Sab".split()
-nomes_meses = """ Janeiro Fevereiro Março
-            Abril Maio Junho
-            Julho Agosto Setembro
-            Outubro Novembro Dezembro""".split()
+nomes_meses = """ 
+                Janeiro Fevereiro Março
+                Abril Maio Junho
+                Julho Agosto Setembro
+                Outubro Novembro Dezembro""".split()
 
 
 class Calendario(object):
