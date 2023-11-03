@@ -12,6 +12,9 @@ nomes_meses = """
                 Julho Agosto Setembro
                 Outubro Novembro Dezembro""".split()
 
+class Calendario():
+    def __init__(self):
+        self.anos = {}
 
 # Um calendario de um ano
 class Ano(object):
