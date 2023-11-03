@@ -7,9 +7,10 @@ def print_opcoes():
     print("1. Adicionar evento")
     print("2. Visualizar evento")
     print("3. Visualizar todos eventos")
-    print("4. Remover evento")
-    print("5. Remover todos eventos")
-    print("6. Sair")
+    print("4. Visualizar mês")
+    print("5. Remover evento")
+    print("6. Remover todos eventos")
+    print("7. Sair")
 
 
 def get_data():
@@ -43,16 +44,20 @@ def main():
 
         elif choice == "4":
             data = get_data()
+            calendario.anos[data.year].show(data.month)
+
+        elif choice == "5":
+            data = get_data()
             calendario.anos[data.year].get_mes(data.month).remove_eventos(data.day)
             print("Eventos em", data.date(), "removidos!")
 
-        elif choice == "5":
+        elif choice == "6":
             for ano in calendario.anos.values():
                 for mes in ano.calendario:
                     mes.clear_eventos()
             print("Todos eventos removidos!")
 
-        elif choice == "6":
+        elif choice == "7":
             break
 
         else:
