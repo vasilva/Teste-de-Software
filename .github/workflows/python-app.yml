@@ -36,6 +36,6 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with unittest
       run: |
-        python -m coverage run -m unittest
-        python -m coverage report
-        python -m coverage html
+        python -m unittest
+        coverage run test_calendario.py
+        coverage report
